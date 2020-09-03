@@ -3,6 +3,8 @@
 public class HideWhenAboveClawMachine : MonoBehaviour
 {
     private MeshRenderer _renderer;
+	
+	public float heightRemove;
 
     private void Start()
     {
@@ -11,6 +13,6 @@ public class HideWhenAboveClawMachine : MonoBehaviour
 
     private void Update()
     {
-        _renderer.enabled = transform.localPosition.y < -3.2;
+        _renderer.enabled = transform.localPosition.y < heightRemove;
     }
 }
