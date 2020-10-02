@@ -14,6 +14,8 @@ public class PrizeCatcher_ClawMachine : MonoBehaviour {
         // If we found a prize
         if(other.GetComponent<Item_ClawMachine>())
         {
+            SoundControl.Instance.PlayGotSound();
+        
             coinExplosion.Play();
 
             // Add the coins
